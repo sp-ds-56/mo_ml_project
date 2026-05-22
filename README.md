@@ -1,26 +1,54 @@
-# Mo Concentrate Grade Prediction
+# Proyecto MLflow - Predicción Ley Concentrado Mo
 
-Proyecto de Machine Learning para predecir:
+## Objetivo
+
+Predecir la variable:
 
 ley_conc_mo_total_4ta_limpieza
 
-## Variables
+mediante un modelo XGBoost.
+
+## Variables de entrada
 
 - ley_mot_alim_ro
 - ley_cut_alim_ro
 - ley_fe_alim_ro
 - re_mo_total
-- k_factor
 - ley_cus_alim_ro
 
-## Modelo
+## Tecnologías
 
-XGBoost Regressor
+- Python
+- XGBoost
+- MLflow
+- Scikit-Learn
 
-## Tracking
+## Entrenamiento
 
-MLflow
+```bash
+python src/train.py
+```
 
-## Autor
+## Tracking de experimentos
 
-Sergio Pincheira
+```bash
+mlflow ui
+```
+
+Abrir:
+
+```text
+http://localhost:5000
+```
+
+## Predicción online
+
+```bash
+python src/predict.py
+```
+
+## Predicción batch
+
+```bash
+python src/batch_predict.py
+```
